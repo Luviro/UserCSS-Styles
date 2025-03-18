@@ -1,0 +1,104 @@
+/* ==UserStyle==
+@name           anime-pictures.net - dark theme
+@namespace      https://github.com/Luviro
+@version        1.0.0
+@description    A customizable theme for anime-pictures.net
+@author         Luviro
+@homepageURL    https://github.com/Luviro/UserCSS-Styles
+@preprocessor   stylus
+
+@var checkbox rm-welcome-title "Remove the welocme title" 1
+@var checkbox rm-support "Remove the support banners" 1
+
+@advanced color main-bg "Main background" #111111
+@advanced color second-bg "Second background" #242424
+@advanced color third-bg "Third background" #333333
+
+@advanced color main-txt "Main text" #F0F0F0
+@advanced color dim-txt "Dim text" #CCCCCC
+
+@advanced color button "button color" #8E04F0
+@advanced color link "links color" #6EE51A
+==/UserStyle== */
+@-moz-document domain("anime-pictures.net") {
+    if (rm-welcome-title) {
+        .index-title.svelte-193m2y8 {
+            display: none;
+        }
+    }
+    if (rm-support) {
+        .margin.svelte-1xx7wnv {
+            display: none;
+        }
+    }
+    .last-stars.svelte-enxrex > div:where(.svelte-enxrex) {
+        box-shadow: none;
+    }
+    input[type="submit"].button-one,
+    input[type="button"].button-one,
+    button.button-one,
+    input[type="submit"].button-one-small,
+    input[type="button"].button-one-small,
+    button.button-one-small {
+        border: 1px solid main-bg;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"],
+    input.color {
+        background-color: third-bg;
+        color: main-txt;
+    }
+    .star_it {
+        background-image: url(../../../assets/styles/second/images/score_star.svg);
+    }
+    label.svelte-udniqj select,
+    select {
+        color: main-txt;
+        background: third-bg;
+        border: none;
+    }
+
+    .theme-first {
+        --body-background: main-bg;
+
+        --autocomplite-background: third-bg;
+        --autocomplite-background-active: link;
+        --button-background-color: button;
+        --button-color: main-txt;
+        --block-background: second-bg;
+
+        --block-title-background: second-bg;
+        --block-box-shadow: none;
+        --smooth-font-color: dim-txt;
+        --all-tags-background: second-bg;
+        --table-border-color: third-bg;
+        --post-tags-background: third-bg;
+        --post-tags-color: link;
+        --post-tags-copyright-color: link;
+
+        --a-color: link;
+        --b-color: main-txt;
+        --image-box-shadow: none;
+        --menu-background: second-bg;
+        --body-color: main-txt;
+        --textarea-background: third-bg;
+        --optional-form-1-color: main-txt;
+        --optional-form-1-background-color: second-bg;
+        --optional-form-2-color: main-txt;
+        --optional-form-2-background-color: second-bg;
+        --optional-form-3-color: main-txt;
+        --optional-form-3-background-color: second-bg;
+
+        --h1-color: main-txt;
+        --h2-color: main-txt;
+        --h3-color: main-txt;
+
+        --post-content-background: second-bg;
+        --post-content-title-background: second-bg;
+        --post-content-shadow: none;
+    }
+}

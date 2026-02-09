@@ -1,0 +1,33 @@
+/* ==UserStyle==
+@name           remove shorts
+@namespace      https://github.com/Luviro
+@version        1.0.0
+@description    Remove any mention of youtube shorts
+@author         Luviro
+@homepageURL    https://github.com/Luviro/UserCSS-Styles
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document domain("www.youtube.com") {
+    
+    
+    ytd-rich-section-renderer div ytd-rich-shelf-renderer[is-shorts=""] {
+        display : none !important;
+        
+    }
+    ytd-reel-shelf-renderer {
+        display : none !important;
+    }
+    
+    #endpoint[title="Shorts"] {
+        display : none !important;
+        
+    }
+    yt-tab-shape[tab-title="Shorts"] {
+        display : none !important;
+    }
+    
+    .ytGridShelfViewModelHost.ytd-item-section-renderer {
+        display : none !important;
+    }
+}
